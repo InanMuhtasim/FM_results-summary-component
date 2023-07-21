@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+body {
+  display: flex;
+  background-color: #fff;
+  font-family: "HankenGrotesk", sans-serif;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  column-gap: 0px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Left */
+.result {
+  width: 297px;
+  background-image: linear-gradient(to bottom, #6642fe, #312ce8);
+  text-align: center;
+  min-height: 410px;
+  margin: 10px;
+  border-radius: 30px;
+  color: white;
+}
+
+.result h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+  margin: 1.5rem;
+}
+
+.result figure {
+  display: flex;
+  background-image: linear-gradient(to bottom, #4a26d0, #4633ed);
+  color: #8b7dff;
+  width: 10rem;
+  height: 10rem;
+  margin: auto;
+  border-radius: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.result figure strong {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 4em;
+}
+
+.result h3 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.result p {
+  color: #8577ff;
+  margin: 1rem 3rem;
+}
+
+/* Right */
+.summary {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.summary h3 {
+  font-weight: bold;
+  padding: 20px;
+}
+
+.summary dl {
+  display: grid;
+  position: relative;
+  grid-template-columns: max-content 1fr;
+  gap: 20px;
+  margin: 0 45px;
+}
+
+.summary dd,
+dt {
+  padding: 10px;
+}
+
+.summary dt {
+  position: relative;
+  padding-left: 25px;
+  font-weight: 500;
+}
+
+.summary dd {
+  text-align: right;
+  color: gray;
+}
+
+.summary dd strong {
+  color: black;
+}
+
+.summary dt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+  background-size: cover;
+}
+
+.reaction {
+  color: #e16b6e;
+}
+.reaction::before {
+  background-image: url("assets/images/icon-reaction.svg");
+}
+
+.memory {
+  color: #f0bc59;
+}
+.memory::before {
+  background-image: url("assets/images/icon-memory.svg");
+}
+
+.verbal {
+  color: #30b293;
+}
+.verbal::before {
+  background-image: url("assets/images/icon-verbal.svg");
+}
+
+.visual {
+  color: #2d38ae;
+}
+.visual::before {
+  background-image: url("assets/images/icon-visual.svg");
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.continue-btn {
+  color: white;
+  background-color: #303b59;
+  border: none;
+  width: 80%;
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.continue-btn:hover {
+  background-image: linear-gradient(to bottom, #6642fe, #312ce8);
+}
+
+@media (max-width: 655px) {
+  body {
+    display: block;
+  }
+
+  main {
+    display: block;
+  }
+  
+  .result {
+    width: 100%;
+    margin: 0;
+    border-radius: 0 0 30px 30px;
+  }
+  .result h2 {
+    margin-top: 0;
+    padding-top: 20px;
+  }
+}
